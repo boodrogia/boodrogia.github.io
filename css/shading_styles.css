@@ -1,0 +1,121 @@
+/* styles.css */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+section {
+  space-y-5;
+  min-height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Section 1 */
+#section1 {
+  @apply bg-gradient-to-r from-green-400 to-blue-500 text-white;
+}
+
+/* Section 2 */
+#section2 {
+  @apply bg-gradient-to-r from-yellow-400 to-orange-500 text-white;
+}
+
+/* Section 3 */
+#section3 {
+  @apply bg-gradient-to-r from-purple-400 to-pink-500 text-white;
+}
+
+/* Section 4 */
+#section4 {
+  @apply bg-gradient-to-r from-indigo-400 to-blue-500 text-white;
+}
+
+/* Responsive styling */
+@media (min-width: 640px) {
+  #section1 { @apply p-8; }
+  #section2 { @apply p-8; }
+  #section3 { @apply p-8; }
+  #section4 { @apply p-8; }
+}
+
+/* Animation */
+.fade-in {
+  @apply opacity-0 transform translate-y-10 transition-all duration-1000 ease-in-out;
+}
+/*
+.fade-in.active {
+  @apply opacity-100 transform translate-y-0;
+}
+
+#banner {
+
+  background-image: url('/media/blurry_locked.jpeg');
+}
+
+#banner.object-none {
+  @apply object-none;
+}
+
+#banner .content {
+  @apply text-center z-10;
+}
+
+/* Overlay for better text visibility
+#banner::before {
+  @apply content-[''] absolute inset-0 bg-black opacity-50;
+}
+*/
+
+ /* Banner */
+#banner {
+  @apply h-screen flex items-center justify-center bg-cover bg-center relative text-white;
+  background-image: url('/media/louver_blinds.jpg'); /* Replace with the URL of your background image */
+}
+
+/* Stretch the image without maintaining aspect ratio */
+#banner.object-none {
+  @apply object-none;
+}
+
+/* Banner Content */
+#banner .content {
+  @apply text-center z-10
+}
+
+/* Overlay for better text visibility */
+#banner::before {
+  @apply content-[''] absolute inset-0 bg-black opacity-50;
+}
+
+/* Navigation */
+nav {
+  @apply fixed top-0 left-0 w-full bg-gray-800 py-4 px-6 flex justify-between items-center z-50;
+}
+
+nav ul {
+  @apply flex space-x-6 text-white text-lg;
+}
+
+nav ul li {
+  @apply transition duration-300 ease-in-out transform hover:scale-105;
+}
+
+nav ul li a {
+  @apply hover:text-gray-300;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  nav ul {
+    @apply flex-col;
+  }
+
+  nav ul li {
+    @apply mb-4;
+  }
+}
+.white-text {
+  @apply text-white;
+}
